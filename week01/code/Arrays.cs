@@ -13,7 +13,20 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        //1- create an array to hold the multiples of size length-parameter
+        double[] multiples = new double[length];
+        //2- using a for loop, iterate less than length-parameter and 
+        for (int i = 0; i < length; i++)
+        {
+            //3- for each iteration, append the number-parameter to the array you created in step 1.,
+            multiples[i] = number;
+            //4- and then reasign the variable by adding the number-parameter
+            number = number + number;
+
+        }
+        //5-then after the loop is done, return the array.
+
+        return multiples; // replace this return statement with your own
     }
 
     /// <summary>
@@ -29,5 +42,18 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+
+        //1-create a loop that will eterate for [int amount] times
+        for (int i = 0; i < amount; i++)
+        {
+            // 2- for each eteration get the last element of the list 
+            int lastElementIndex = data.Count - 1;
+            int lastElement = data[lastElementIndex];
+            // 3- insert the element in step 2 at the beginning of the list
+            data.Insert(0, lastElement);
+            // 4- delete the last element to avoid dublication of the element.
+            data.RemoveAt(lastElementIndex);
+        }
+
     }
 }
