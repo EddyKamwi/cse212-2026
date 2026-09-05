@@ -22,9 +22,8 @@ public static class Arrays
             multiples[i] = number;
             //4- and then reasign the variable by adding the number-parameter
             number = number + number;
-
         }
-        //5-then after the loop is done, return the array.
+        //5-then after the loop is done, return the which was created in step 1 array.
 
         return multiples; // replace this return statement with your own
     }
