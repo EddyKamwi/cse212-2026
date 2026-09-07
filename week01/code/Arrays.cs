@@ -14,7 +14,6 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        //1- create an array to hold the multiples of size length-parameter
         double[] multiples = new double[length];
         //2- using a for loop, iterate less than length-parameter and 
         for (int i = 0; i < length; i++)
@@ -42,17 +41,14 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        //1-create a loop that will eterate for [int amount] time
-        for (int i = 0; i < amount; i++)
-        {
-            // 2- for each eteration get the last element of the list 
-            int lastElementIndex = data.Count - 1;
-            int lastElement = data[lastElementIndex];
-            // 3- insert the element in step 2 at the beginning of the list
-            data.Insert(0, lastElement);
-            // 4- delete the last element to avoid dublication of the element.
-            data.RemoveAt(lastElementIndex);
-        }
+
+        //1- Splite the array to be rotated by determining the start index of the split
+        int startIndex = data.Count - amount;
+        List<int> rotateList = data.GetRange(startIndex, amount);
+        //2- delete [Range] it from the original array
+        data.RemoveRange(startIndex, amount);
+        //3- insert [Range] the array in step 1 at the beginning using the index of 0
+        data.InsertRange(0, rotateList);
 
     }
 }
