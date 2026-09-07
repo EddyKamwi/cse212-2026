@@ -1,8 +1,9 @@
 public static class Arrays
 {
     /// <summary>
-    /// This function will produce an array of size 'length' starting with 'number' followed by multiples of 'number'.  For 
-    /// example, MultiplesOf(7, 5) will result in: {7, 14, 21, 28, 35}.  Assume that length is a positive
+    /// This function will produce an array of size 'length' starting
+    /// with 'number' followed by multiples of 'number'.  For 
+    /// example, MultiplesOf(7, 5) will result in: {7, 14, 21, 28, 35}. Assume that length is a positive
     /// integer greater than 0.
     /// </summary>
     /// <returns>array of doubles that are the multiples of the supplied number</returns>
@@ -18,12 +19,11 @@ public static class Arrays
         //2- using a for loop, iterate less than length-parameter and 
         for (int i = 0; i < length; i++)
         {
-            //3- for each iteration, append the number-parameter to the array you created in step 1.,
-            multiples[i] = number;
-            //4- and then reasign the variable by adding the number-parameter
-            number = number + number;
+            //3- for each iteration, append the number-parameter, multiplying
+            // the number by the addition of its index and 1
+            multiples[i] = number * (i + 1);
         }
-        //5-then after the loop is done, return the which was created in step 1 array.
+        //4-then after the loop is done, return the which was created in step 1 array.
 
         return multiples; // replace this return statement with your own
     }
@@ -42,7 +42,7 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        //1-create a loop that will eterate for [int amount] times
+        //1-create a loop that will eterate for [int amount] time
         for (int i = 0; i < amount; i++)
         {
             // 2- for each eteration get the last element of the list 
