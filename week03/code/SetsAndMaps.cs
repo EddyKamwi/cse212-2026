@@ -60,14 +60,13 @@ public static class SetsAndMaps
         {
             var fields = line.Split(",");
             // TODO Problem 2 - ADD YOUR CODE HERE
-            int degree = int.Parse(fields[4]);
             if (degrees.ContainsKey(fields[3]))
             {
-                degrees[fields[3]] += degree;
+                degrees[fields[3]] += 1;
             }
             else
             {
-                degrees[fields[3]] = degree;
+                degrees[fields[3]] = 1;
             }
 
         }
