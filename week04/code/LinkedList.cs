@@ -140,6 +140,7 @@ public class LinkedList : IEnumerable<int>
         var currentNode = _head;
         while (currentNode != null)
         {
+            var NextNode = currentNode.Next;
             if (currentNode.Data == value)
             {
                 if (_head == _tail)
@@ -164,13 +165,14 @@ public class LinkedList : IEnumerable<int>
                 {
                     RemoveTail();
                 }
+                break;
             }
-                //change the currentNode to the next in line
+            //change the currentNode to the next in line
 
-                currentNode = currentNode.Next;
+            currentNode = NextNode;
 
 
-            
+
 
 
         }
@@ -187,6 +189,7 @@ public class LinkedList : IEnumerable<int>
         var currentNode = _head;
         while (currentNode != null)
         {
+
             if (currentNode.Data == oldValue)
             {
                 //re-assign the new value
