@@ -54,12 +54,12 @@ public class Node
 
         if (value < Data)
         {
-            if(Left is not null)
+            if (Left is not null)
                 return Left.Contains(value);
         }
         else if (value > Data)
         {
-            if(Right is not null)
+            if (Right is not null)
                 return Right.Contains(value);
         }
         return false;
@@ -68,6 +68,17 @@ public class Node
     public int GetHeight()
     {
         // TODO Start Problem 4
-        return 0; // Replace this line with the correct return statement(s)
+        int leftHeight = 0; int rightHeight = 0;
+        if (Left is not null)
+        {
+            leftHeight = Left.GetHeight();
+        }
+        if (Right is not null)
+        {
+            rightHeight = Right.GetHeight();
+        }
+
+        int treeHeight = 1 + Math.Max(rightHeight, leftHeight);
+        return treeHeight;// Replace this line with the correct return statement(s)
     }
 }
